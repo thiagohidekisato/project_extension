@@ -1,0 +1,15 @@
+<li id="project-<%= project.id %>" class="col-md-4">
+  <%= link_to gravatar_for(project.professor, size: 50), project.professor %>
+  <span class="project"><%= link_to project.name, project %></span>
+  <span class="content">
+    Descrição: <%= project.description %><br>
+    Perfil dos voluntários: <%= project.perfil_volunteers %>
+  </span>
+  <span class="timestamp">
+    Posted <%= time_ago_in_words(project.created_at) %> ago.
+    <% if current_professor?(project.professor) %>
+      <%= link_to "delete", project, method: :delete,
+                                       data: { confirm: "You sure?" } %>
+    <% end %>
+  </span>
+</li>

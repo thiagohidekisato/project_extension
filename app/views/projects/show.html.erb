@@ -1,0 +1,31 @@
+<% provide(:title, @project.name) %>
+<div class="container" >
+    <h1>Projeto: <%= @project.name %></h1>
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        Nome: <%= @project.name %>
+        <br>
+        Data de início: <%= @project.date_start %>
+        <br>
+        Data de fim: <%= @project.date_finish %>
+        <br>
+        Descrição: <%= @project.description %>
+        <br>
+        Fomento: <%= @project.fomento %>
+        <br>
+        Local: <%= @project.local %>
+        <br>
+        Imagens: <%= @project.images %>
+        <br>
+        Descrição: <%= @project.description %>
+        <br>
+        Número de participantes: <%= @project.n_participants %>
+        <br>
+        Vagas para voluntários: <%= @project.v_volunteers %>
+        <br>
+        Vagas para bolsistas: <%= @project.v_bolsistas %>
+        <br>
+        Perfil dos voluntários: <%= @project.perfil_volunteers %>
+      </div>
+    </div>
+</div><br></div>

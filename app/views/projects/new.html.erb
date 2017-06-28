@@ -1,0 +1,17 @@
+<% if logged_in? %>
+  <div class="container" >
+    <aside class="col-md-4">
+      <section class="professor_info">
+        <%= render 'shared/professor_info' %>
+      </section>
+      <section class="project_form">
+        <%= render 'shared/project_form' %>
+      </section>
+    </aside>
+  </div>
+  
+<% else %>
+  <div class="container" id="alinhamento-header">
+	  <h1>Faça login para cadastrar um projeto</h1>
+  </div>
+<% end %>

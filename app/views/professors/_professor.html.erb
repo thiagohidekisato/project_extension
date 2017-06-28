@@ -1,0 +1,11 @@
+<li>
+  <%= gravatar_for professor, size: 50 %>
+  <%= link_to professor.name, professor %>
+  
+  <% if logged_in? %>
+  	<% if current_professor.admin? && !current_professor?(professor) %>
+    	| <%= link_to "delete", professor, method: :delete,
+                                  		data: { confirm: "Tem certeza?" } %>
+  	<% end %>
+  <% end %>
+</li>

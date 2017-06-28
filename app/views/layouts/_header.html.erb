@@ -1,0 +1,142 @@
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container">
+    <font size="2">
+    <div class="row">
+      <ul class="nav navbar-nav hidden-sm hidden-xs hidden-md">
+        <li>
+          <a accesskey="1" href="#"><span style="color: white;"> Ir para o conteúdo </span> <span style="color: black; background-color: white;"> 1 </span></a>
+        </li>
+        <li>
+          <a accesskey="2" href="#"><span style="color: white;"> Ir para o menu </span> <span style="color: black; background-color: white;"> 2 </span></a>
+        </li>
+        <li>
+          <a accesskey="3" href="#"><span style="color: white;"> Ir para a busca </span> <span style="color: black; background-color: white;"> 3 </span></a>
+        </li>
+        <li class="last-item">
+          <a accesskey="4" href="#fot" id="link-rodape"><span style="color: white;"> Ir para o rodapé </span> <span style="color: black; background-color: white;"> 4 </span></a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a href="#" ><span style="color: white;">ACESSIBILIDADE</span></a>
+        </li>
+        <li>
+          <a href="#" ><span style="color: white;">ALTO CONTRASTE</span></a>
+        </li>
+        <li>
+          <a href="#" ><span style="color: white;">MAPA DO SÍTIO</span></a>
+        </li>
+        <li>
+          <div class="btn-group hidden-xs hidden-md hidden-lg">
+              <button type="button" class="btn btn-primary navbar-btn">Login</button>
+              <button type="button" class="btn btn-primary navbar-btn">Cadastre-se</button>
+          </div>
+        </li>
+      </ul>
+    </div>
+    </font>
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" >
+      <div class="row">
+        <div class="col-md-7 dmbs-header-img">
+          <%= link_to image_tag('Unifesp.png', :height => "110px"), root_path, class:"hidden-xs hidden-sm"%>
+        </div>
+        <div class="col-md-2"></div>
+        <div class="col-3 col-md-auto">
+          <div class="btn-group hidden-sm">
+              <% if logged_in? %>
+                <div class="dropdown">
+                  <button class="btn btn-primary navbar-btn dropdown-toggle " type="button" data-toggle="dropdown">Olá, <%= @current_professor.name %>
+    <span class="caret"></span></button>
+                  <ul class="dropdown-menu">
+                    <li><%= link_to "Perfil", current_professor %></li>
+                    <li><%= link_to "Configurações", edit_professor_path(current_professor) %></li>
+                    <li class="divider"></li>
+                      <li><%= link_to "Logout", logout_path, method: :delete%></li>
+                  </ul>
+              </div>
+              <% else %>
+                <%= link_to "Login", login_path, class:"btn btn-primary navbar-btn" %>
+                <%= link_to "Cadastre-se!", signup_path, class: "btn btn-primary navbar-btn" %>
+              <% end %>
+          </div>
+        </div>
+      </div>
+      <div class="row" style="background-color: #184127;">
+        <div class="col-md-8">
+          <ul class="nav navbar-nav">
+            <li><%= link_to "Projetos", projects_path, style: "color:white;" %></li>
+            <li><%= link_to "Professores", professors_path , style: "color:white;"%></li>
+            <li><%= link_to "Sobre", sobre_path , style: "color:white;"%></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" id="menu1" data-toggle="dropdown"><span style="color: white;">Dúvidas</span> <b class="caret"></b> </a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                <li role="presentation">
+                 <%= link_to "Tutoriais", tutorials_path %>
+                </li>
+                <li role="presentation">
+                  <%= link_to "Dúvidas Frequentes", duvidas_path %>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <div class="widget-search-top" id="busca-teste">
+              <form role="search" method="get" id="searchform" class="navbar-form" action="#">
+                <div class="input-group">
+                  <input type="text" class="form-control search-field" name="s" id="search-bar" accesskey="3" placeholder="Entre com sua busca..." title="Ops... função de busca em construção!">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="submit"><span class="fa fa-refresh fa-spin fa-fw" aria-hidden="true"></span></button>
+                    </span>
+                </div>
+              </form>
+              </div>
+            </li>
+          </ul>
+        </div> 
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+
+<!--<header class="navbar navbar-fixed-top navbar-inverse">
+  <div class="container">
+    <%= link_to "Portal Extensão", root_path, id: "logo" %>
+    <nav>
+      <ul class="nav navbar-nav navbar-right">
+        <li><%= link_to "Página Inicial", root_path %></li>
+        <li><%= link_to "Projetos", projects_path %></li>
+        <li><%= link_to "Professores", professors_path %></li>
+        <li><%= link_to "Dúvidas", duvidas_path %></li>
+        <li><%= link_to "Sobre", sobre_path %></li>
+        <% if logged_in? %>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Conta<b class="caret"></b> </a>
+            <ul class="dropdown-menu">
+              <li><%= link_to "Perfil", current_professor %></li>
+              <li><%= link_to "Configurações", edit_professor_path(current_professor) %></li>
+              <li class="divider"></li>
+              <li>
+                <%= link_to "Log out", logout_path, method: :delete %>
+              </li>
+            </ul>
+          </li>
+        <% else %>
+          <li><%= link_to "Log in", login_path %></li>
+        <% end %>
+      </ul>
+    </nav>
+  </div>
+</header> -->
