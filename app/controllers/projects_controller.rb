@@ -1,6 +1,7 @@
 class ProjectsController < ApplicationController
   before_action :logged_in_professor, only: [:create, :destroy]
   before_action :correct_professor,   only: :destroy
+  add_breadcrumb "Página inicial", :root_path
 
   def show
     @project = Project.find(params[:id])
@@ -8,6 +9,7 @@ class ProjectsController < ApplicationController
 
   def index
     @projects = Project.paginate(page: params[:page])
+    add_breadcrumb "Projetos"
   end
 
   def new

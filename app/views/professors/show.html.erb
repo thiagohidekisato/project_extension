@@ -1,11 +1,8 @@
 <% provide(:title, @professor.name) %>
 <div class="container" >
-
   <% if logged_in? %>
-    <%= link_to "Cadastre um projeto", newproj_path, class: "btn btn-lg btn-primary" %>
+    <%= link_to "Cadastre um projeto", newproj_path, class: "btn btn-lg btn-project" %>
   <% end %>
-
-
   <div class="row">
     <aside class="col-md-4">
       <section class="user_info">
@@ -14,15 +11,9 @@
           <%= @professor.name %>
         </h1>
       </section>
-
-          E-mail: <%= @professor.email %>
-          <br>
-          Telefone: <%= @professor.phone %> Ramal: <%= @professor.ramal %>
-          <br>
-          Especialização: <%= @professor.specialization %>
-
-
-      </section>
+      E-mail: <%= @professor.email %> <br>
+      Telefone: <%= @professor.phone %> Ramal: <%= @professor.ramal %> <br>
+      Especialização: <%= @professor.specialization %>
     </aside>
     <div class="col-md-8">
       <% if @professor.projects.any? %>
@@ -32,6 +23,6 @@
         </ol>
         <%= will_paginate @projects %>
       <% end %>
-    </div> </div> 
+    </div>
   </div>
 </div>

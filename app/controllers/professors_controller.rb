@@ -2,6 +2,7 @@ class ProfessorsController < ApplicationController
   before_action :logged_in_professor, only: [:edit, :update, :destroy]
   before_action :correct_professor,   only: [:edit, :update]
   before_action :admin_professor,     only: :destroy
+  add_breadcrumb "Página inicial", :root_path
 
   def show
     @professor = Professor.find(params[:id])
@@ -9,6 +10,7 @@ class ProfessorsController < ApplicationController
   end
 
   def new
+    add_breadcrumb "Cadastro de professores"
     @professor = Professor.new
   end
 
@@ -19,7 +21,7 @@ class ProfessorsController < ApplicationController
       flash[:success] = "Cadastro realizado com sucesso!"
       redirect_to @professor
     else
-      render 'new' 
+      render 'new'
     end
   end
 
