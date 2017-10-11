@@ -1,0 +1,62 @@
+<% provide(:title, "Calend�rio de eventos") %>
+<div class="container">
+<!-- Page Heading/Breadcrumbs -->
+    <div class="row">
+		<div class="col-lg-12">
+            <ol class="breadcrumb">
+                <li> <%= link_to "Home", root_path %> </li>
+                <li class="active">Calend�rio de eventos</li>
+            </ol>
+            <h1 class="page-header">Calend�rio de eventos</h1>
+        </div>
+    </div>
+    <!-- /.row -->
+    <!-- Content Row -->
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel-group" id="accordion">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Outubro</a>
+                        </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse">
+                        <div class="panel-body">
+													<b>Semana da Ci�ncia e Tecnologia</b><br>
+													Data: 23/10/2017<br>
+													Local: Universidade Federal de S�o Paulo campus S�o Jos� dos Campos<br>
+													Unidade Parque Tecnol�gico - Avenida Cesare Mansueto Giulio Lattes, n� 1201 - Eug�nio de Mello, CEP: 12247-014<br>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.panel -->
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">Novembro</a>
+                        </h4>
+                    </div>
+                    <div id="collapseTwo" class="panel-collapse collapse">
+                        <div class="panel-body">
+Nenhum evento agendado at� o momento. 
+                        </div>
+                    </div>
+                </div>
+                <!-- /.panel -->
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">Dezembro</a>
+                        </h4>
+                    </div>
+                    <div id="collapseThree" class="panel-collapse collapse">
+                        <div class="panel-body">
+	Nunhum evento agendado at� o momento.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
