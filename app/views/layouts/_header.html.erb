@@ -38,10 +38,13 @@
   </div>
   <div class="container">
     <nav class="row">
-      <div class="col-md-10 col-sm-10 col-xs-10">
+      <div class="nav navbar-nav">
         <%= link_to image_tag('Unifesp.png',  height: "90px"), root_path %>
       </div>
-      <div class="col-md-auto col-sm-auto col-xs-auto">
+      <div class="nav navbar-nav">
+        <span id="titulouniversidade">Universidade Federal de São Paulo</span>
+      </div>
+      <div class="nav navbar-nav navbar-right">
          <div class="btn-group">
              <% if logged_in? %>
                <div class="dropdown">

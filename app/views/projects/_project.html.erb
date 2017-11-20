@@ -4,6 +4,7 @@
   <span class="content">
     Descrição: <%= project.description %><br>
     Perfil dos voluntários: <%= project.perfil_volunteers %>
+    <%= image_tag project.picture.url if project.picture? %>
   </span>
   <span class="timestamp">
     Posted <%= time_ago_in_words(project.created_at) %> ago.

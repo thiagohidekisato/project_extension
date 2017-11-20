@@ -37,12 +37,13 @@ class ProjectsController < ApplicationController
 
     def project_params
       params.require(:project).permit(:name, :date_start, :date_finish, :fomento,
-      									:local, :images, :description, :n_participants,
-      									:v_volunteers, :v_bolsistas, :perfil_volunteers)
+      									:local, :description, :n_participants,
+      									:v_volunteers, :v_bolsistas, :perfil_volunteers, :picture)
     end
 
     def correct_professor
       @project = current_professor.projects.find_by(id: params[:id])
       redirect_to projects_path if @project.nil?
     end
+
 end

@@ -1,149 +1,121 @@
 <div class="container">
-<% if !logged_in? %>
-  <div class="container" >
-	  <h1>Portal Extensão</h1>
-		<%= link_to "Cadastre-se!", signup_path, class: "btn btn-lg btn-primary" %>
-  </div>
-
-<% else %>
-  <!-- Page Heading/Breadcrumbs -->
-    <div class="row">
-        <div class="col-lg-12">
-            <h1 class="page-header">Home
-            </h1>
+  <!-- Header Carousel -->
+  <header id="myCarousel" class="carousel slide">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+        <%= image_tag "projeto1.jpg",class: "fill"%>
+        <div class="carousel-caption">
+            <h2>Projeto NETES</h2>
         </div>
+      </div>
+      <div class="item">
+        <%= image_tag "projeto2.jpg",class: "fill"%>
+        <div class="carousel-caption">
+          <h2>Projeto Mão 3D</h2>
+        </div>
+      </div>
+      <div class="item">
+        <%= image_tag "projeto3.jpg",class: "fill"%>
+        <div class="carousel-caption">
+          <h2>Projeto Parque da Ciência e Tecnologia</h2>
+        </div>
+      </div>
     </div>
-    <!-- /.row -->
+    <!-- Controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="icon-prev"></span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="icon-next"></span>
+    </a>
+  </header>
 
-<% end %>
-<!-- Header Carousel -->
-    <header id="myCarousel" class="carousel slide">
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-        </ol>
-
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner">
-            <div class="item active">
-             <%= image_tag "projeto1.jpg",class: "fill"%>
-                <div class="carousel-caption">
-                <!-- FOTO GRUPO -->
-                    <h2>Projeto NETES</h2>
-                </div>
-            </div>
-            <div class="item">
-             <%= image_tag "projeto2.jpg",class: "fill"%>
-                <div class="carousel-caption">
-                <!-- FOTO GRUPO -->
-                    <h2>Projeto Mão 3D</h2>
-                </div>
-            </div>
-            <div class="item">
-             <%= image_tag "projeto3.jpg",class: "fill"%>
-                <div class="carousel-caption">
-                <!-- FOTO GRUPO -->
-                    <h2>Projeto Parque da Ciência e Tecnologia</h2>
-                </div>
-            </div>
+  <!-- Page Content -->
+  <div class="container">
+    <!-- row dos mais acessados -->
+    <div class="row">
+      <div class="col-lg-12">
+        <h1 class="page-header">Projetos mais acessados</h1>
+      </div>
+      <div class="col-md-4">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4><i class="fa fa-fw fa-check"></i> Proj1</h4>
+          </div>
+          <div class="panel-body">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
+            <a href="#" class="btn btn-default">Veja mais detalhes</a>
+          </div>
         </div>
-
-        <!-- Controls -->
-        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-            <span class="icon-prev"></span>
-        </a>
-        <a class="right carousel-control" href="#myCarousel" data-slide="next">
-            <span class="icon-next"></span>
-        </a>
-    </header>
-
-    <!-- Page Content -->
-    <div class="container">
-
-        <!-- row dos mais acessados -->
-        <div class="row">
-            <div class="col-lg-12">
-                <h1 class="page-header">
-                    Projetos mais acessados
-                </h1>
-            </div>
-            <div class="col-md-4">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4><i class="fa fa-fw fa-check"></i> Proj1</h4>
-                    </div>
-                    <div class="panel-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
-                        <a href="#" class="btn btn-default">Veja mais detalhes</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4><i class="fa fa-fw fa-gift"></i> Proj2</h4>
-                    </div>
-                    <div class="panel-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
-                        <a href="#" class="btn btn-default">Veja mais detalhes</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4><i class="fa fa-fw fa-compass"></i> Proj3</h4>
-                    </div>
-                    <div class="panel-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
-                        <a href="#" class="btn btn-default">Veja mais detalhes</a>
-                    </div>
-                </div>
-            </div>
+      </div>
+      <div class="col-md-4">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4><i class="fa fa-fw fa-gift"></i> Proj2</h4>
+          </div>
+          <div class="panel-body">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
+            <a href="#" class="btn btn-default">Veja mais detalhes</a>
+          </div>
         </div>
+      </div>
+      <div class="col-md-4">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4><i class="fa fa-fw fa-compass"></i> Proj3</h4>
+          </div>
+          <div class="panel-body">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
+            <a href="#" class="btn btn-default">Veja mais detalhes</a>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- row dos novos -->
     <div class="row">
-            <div class="col-lg-12">
-                <h1 class="page-header">
-                    Novos projetos
-                </h1>
-            </div>
-            <div class="col-md-4">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4><i class="fa fa-fw fa-check"></i> Projx</h4>
-                    </div>
-                    <div class="panel-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
-                        <a href="#" class="btn btn-default">Veja mais detalhes</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4><i class="fa fa-fw fa-gift"></i> Projy</h4>
-                    </div>
-                    <div class="panel-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
-                        <a href="#" class="btn btn-default">Veja mais detalhes</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4><i class="fa fa-fw fa-compass"></i> Projz</h4>
-                    </div>
-                    <div class="panel-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
-                        <a href="#" class="btn btn-default">Veja mais detalhes</a>
-                    </div>
-                </div>
-            </div>
+      <div class="col-lg-12">
+        <h1 class="page-header">Novos projetos</h1>
+      </div>
+      <div class="col-md-4">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4><i class="fa fa-fw fa-check"></i>Projx</h4>
+          </div>
+          <div class="panel-body">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
+            <a href="#" class="btn btn-default">Veja mais detalhes</a>
+          </div>
         </div>
-    </div>
-</div></div>
+      </div>
+      <div class="col-md-4">
+          <div class="panel panel-default">
+              <div class="panel-heading">
+                  <h4><i class="fa fa-fw fa-gift"></i>Projy</h4>
+              </div>
+              <div class="panel-body">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
+                  <a href="#" class="btn btn-default">Veja mais detalhes</a>
+              </div>
+          </div>
+      </div>
+      <div class="col-md-4">
+          <div class="panel panel-default">
+              <div class="panel-heading">
+                  <h4><i class="fa fa-fw fa-compass"></i> Projz</h4>
+              </div>
+              <div class="panel-body">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
+                  <a href="#" class="btn btn-default">Veja mais detalhes</a>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

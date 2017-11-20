@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170521052119) do
+ActiveRecord::Schema.define(version: 20171119205117) do
 
   create_table "professors", force: :cascade do |t|
     t.string "name"
@@ -43,6 +43,7 @@ ActiveRecord::Schema.define(version: 20170521052119) do
     t.integer "professor_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "picture"
     t.index ["professor_id", "created_at"], name: "index_projects_on_professor_id_and_created_at"
     t.index ["professor_id"], name: "index_projects_on_professor_id"
   end

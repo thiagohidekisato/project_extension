@@ -16,6 +16,9 @@ gem 'will_paginate'
 gem 'bootstrap-will_paginate'
 gem "font-awesome-rails"
 gem "breadcrumbs_on_rails"
+gem 'rails-i18n'
+gem 'carrierwave'
+gem 'cloudinary'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
@@ -41,11 +44,13 @@ gem 'bcrypt', '~> 3.1.7'
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
+  gem 'better_errors'
   gem 'sqlite3'
   gem 'byebug', platform: :mri
 end
 
 group :development do
+  gem 'rails-erd'
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
