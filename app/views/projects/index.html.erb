@@ -2,7 +2,6 @@
 <div class="container">
 	<div class="row">
 	    <div class="col-lg-12">
-	        <h1 class="page-header">Projetos e Programas de Extensão <small>Todos</small></h1>
 					<ol class="breadcrumb">
 					  <%= render_breadcrumbs :tag => :li, :separator => "" %>
 					</ol>
@@ -13,12 +12,10 @@
 		<%= link_to "Cadastre um projeto", newproj_path, class: "btn btn-lg btn-project" %>
 	<% end %>
 
+  <h1 class="my-4">Projetos
+      <small>Todos</small>
+  </h1>
 	<%= will_paginate %>
-	<div class="row" style="text-align: justify;">
-		<ul class="projects">
-		   <%= render @projects %>
-		</ul>
-	</div>
-	<%= will_paginate %>
-	
+	<%= render @projects %>
+  <%= will_paginate %>
 </div>

@@ -1,0 +1,140 @@
+/* Baseado em https://www.railstutorial.org/book/frontmatter */
+
+.projects {
+  list-style: none;
+  padding: 0;
+
+  li {
+    padding: 10px 10px;
+    border-top: 1px solid #e8e8e8;
+    float: left;
+    display: inline-block;
+  }
+  .user {
+    margin-top: 5em;
+    padding-top: 0;
+  }
+  .content {
+    display: block;
+    margin-left: 60px;
+    img {
+      display: block;
+      padding: 5px 0;
+    }
+  }
+  .timestamp {
+    color: #999966;
+    display: block;
+    margin-left: 60px;
+  }
+  .gravatar {
+    float: left;
+    margin-right: 10px;
+    margin-top: 5px;
+  }
+}
+
+
+
+/* Alterações para o bootstrap 4 */
+
+.btn-project {
+  color:#fff;
+  background-color:#184127;
+  border-color:#696969
+}
+
+.btn-project.active,
+.btn-project.focus,
+.btn-project:active,
+.btn-project:focus,
+.btn-project:hover,
+.open>.dropdown-toggle.btn-project{
+  color:#000;
+  background-color:#fff;
+  border-color:#fff
+}
+
+.btn-project.active,
+.btn-project:active,
+.open>.dropdown-toggle.btn-project{
+  background-image:none
+}
+.btn-project.disabled,
+.btn-project.disabled.active,
+.btn-project.disabled.focus,
+.btn-project.disabled:active,
+.btn-project.disabled:focus,
+.btn-project.disabled:hover,
+.btn-project[disabled],
+.btn-project[disabled].active,
+.btn-project[disabled].focus,
+.btn-project[disabled]:active,
+.btn-project[disabled]:focus,
+.btn-project[disabled]:hover,fieldset[disabled]
+.btn-project,fieldset[disabled]
+.btn-project.active,fieldset[disabled]
+.btn-project.focus,fieldset[disabled]
+.btn-project:active,fieldset[disabled]
+.btn-project:focus,fieldset[disabled]
+.btn-project:hover{
+  background-color:#fff;
+  border-color:#fff
+}
+.btn-project
+.badge{
+  color:#fff;
+  background-color:#fff
+}
+
+
+
+
+.nav-dropdown {
+  color:#000;
+  background-color:#fff;
+  border-color:#696969
+}
+
+.nav-dropdown.active,
+.nav-dropdown.focus,
+.nav-dropdown:active,
+.nav-dropdown:focus,
+.nav-dropdown:hover,
+.open>.dropdown-toggle.nav-dropdown{
+  color:#696969;
+  background-color:#fff;
+  border-color:#fff
+}
+
+.nav-dropdown.active,
+.nav-dropdown:active,
+.open>.dropdown-toggle.nav-dropdown{
+  background-image:none
+}
+.nav-dropdown.disabled,
+.nav-dropdown.disabled.active,
+.nav-dropdown.disabled.focus,
+.nav-dropdown.disabled:active,
+.nav-dropdown.disabled:focus,
+.nav-dropdown.disabled:hover,
+.nav-dropdown[disabled],
+.nav-dropdown[disabled].active,
+.nav-dropdown[disabled].focus,
+.nav-dropdown[disabled]:active,
+.nav-dropdown[disabled]:focus,
+.nav-dropdown[disabled]:hover,fieldset[disabled]
+.nav-dropdown,fieldset[disabled]
+.nav-dropdown.active,fieldset[disabled]
+.nav-dropdown.focus,fieldset[disabled]
+.nav-dropdown:active,fieldset[disabled]
+.nav-dropdown:focus,fieldset[disabled]
+.nav-dropdown:hover{
+  background-color:#fff;
+  border-color:#fff
+}
+.nav-dropdown
+.badge{
+  color:#fff;
+  background-color:#fff
+}

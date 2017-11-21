@@ -11,7 +11,8 @@ gem 'rails', '~> 5.1.1'
 gem 'puma', '~> 3.7'
 
 gem 'faker'
-gem 'bootstrap-sass'
+#gem 'bootstrap-sass'
+gem 'bootstrap', '~> 4.0.0.beta2.1'
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
 gem "font-awesome-rails"
@@ -23,7 +24,7 @@ gem 'cloudinary'
 
 
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0'
+gem 'sass-rails'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'

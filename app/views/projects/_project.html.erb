@@ -1,16 +1,31 @@
-<li id="project-<%= project.id %>" class="col-md-4">
-  <%= link_to gravatar_for(project.professor, size: 50), project.professor %>
-  <span class="project"><%= link_to project.name, project %></span>
-  <span class="content">
-    Descrição: <%= project.description %><br>
-    Perfil dos voluntários: <%= project.perfil_volunteers %>
-    <%= image_tag project.picture.url if project.picture? %>
-  </span>
+<div class="container">
+  <div class="row">
+    <div class="col-md-7">
+      <% if false %>
+        <% if project.picture? %>
+          <%= link_to (image_tag project.picture.url), project.professor %>
+        <% else %>
+          <%= link_to gravatar_for(project.professor, size: 50), project.professor %>
+        <% end %>
+      <% else %>
+        <img class="img-fluid rounded mb-3 mb-md-0" src="http://placehold.it/700x300" alt="">
+      <% end %>
+
+    </div>
+    <div class="col-md-5">
+      <h3><%= project.name %></h3>
+      <p>Descrição: <%= project.description %></p>
+      <p>Perfil dos voluntários: <%= project.perfil_volunteers %></p>
+      <%= link_to "Ver projeto", project, class: "btn btn-primary"%>
+    </div>
+  </div>
+
   <span class="timestamp">
-    Posted <%= time_ago_in_words(project.created_at) %> ago.
+    Postado <%= time_ago_in_words(project.created_at) %> atrás.
     <% if current_professor?(project.professor) %>
-      <%= link_to "delete", project, method: :delete,
-                                       data: { confirm: "You sure?" } %>
+      <%= link_to "Excluir", project, method: :delete,
+                                        data: { confirm: "Você tem certeza?" } %>
     <% end %>
   </span>
-</li>
+  <hr>
+</div>

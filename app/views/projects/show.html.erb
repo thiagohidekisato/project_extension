@@ -1,20 +1,36 @@
 <% provide(:title, @project.name) %>
 <div class="container" >
-  <h1>Projeto: <%= @project.name %></h1>
   <div class="row">
-    <div class="col-md-6 col-md-offset-3">
-      Nome: <%= @project.name %> <br>
-      Data de início: <%= @project.date_start %> <br>
-      Data de fim: <%= @project.date_finish %> <br>
-      Descrição: <%= @project.description %> <br>
-      Fomento: <%= @project.fomento %> <br>
-      Local: <%= @project.local %> <br>
-      Imagens: <%= @project.images %> <br>
-      Descrição: <%= @project.description %> <br>
-      Número de participantes: <%= @project.n_participants %> <br>
-      Vagas para voluntários: <%= @project.v_volunteers %> <br>
-      Vagas para bolsistas: <%= @project.v_bolsistas %> <br>
-      Perfil dos voluntários: <%= @project.perfil_volunteers %> <br>
+    <div class="col-lg-12">
+      <!-- Name -->
+      <h1 class="mt-4"><%= @project.name %></h1>
+      <!-- Author -->
+      <p class="lead">
+        por
+        <%= link_to @project.name, @project.professor %>
+      </p>
+      <hr>
+      <!-- Date/Time -->
+      <p>Postado <%= time_ago_in_words(@project.created_at) %> atrás.</p>
+      <hr>
+      <!-- Preview Image -->
+      <div class="text-center">
+        <img class="img-fluid rounded" src="http://placehold.it/900x300" alt="">
+      </div>
+      <hr>
+      <!-- Post Content -->
+      <p>Data de início: <%= @project.date_start %></p>
+      <p>Data de fim: <%= @project.date_finish %></p>
+      <p>Descrição: <%= @project.description %></p>
+      <p>Fomento: <%= @project.fomento %></p>
+      <p>Local: <%= @project.local %></p>
+      <p>Imagens: <%= @project.images %></p>
+      <p>Descrição: <%= @project.description %></p>
+      <p>Número de participantes: <%= @project.n_participants %></p>
+      <p>Vagas para voluntários: <%= @project.v_volunteers %></p>
+      <p>Vagas para bolsistas: <%= @project.v_bolsistas %></p>
+      <p>Perfil dos voluntários: <%= @project.perfil_volunteers %></p>
+      <hr>
     </div>
   </div>
 </div>
