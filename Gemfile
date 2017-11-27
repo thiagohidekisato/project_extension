@@ -50,7 +50,6 @@ gem 'bcrypt', '~> 3.1.7'
 group :development, :test do
   gem 'binding_of_caller'
   gem 'better_errors'
-  gem 'pg'
   gem 'byebug', platform: :mri
 end
 

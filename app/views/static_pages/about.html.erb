@@ -1,7 +1,5 @@
 <% provide(:title, "Sobre") %>
-  <ol class="breadcrumb">
-    <%= render_breadcrumbs :tag => :li, :separator => "" %>
-  </ol>
+  <%= render_breadcrumbs builder: ::Bootstrap4BreadcrumbsBuilder %>
   <h1>Sobre a Extensão</h1>
   <div class="panel-group" id="accordion">
     <div class="panel panel-default">

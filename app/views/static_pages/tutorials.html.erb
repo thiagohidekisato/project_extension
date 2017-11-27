@@ -1,6 +1,4 @@
 <% @title = "Tutoriais" %>
 <% provide(:title, @title) %>
-<ol class="breadcrumb">
-  <%= render_breadcrumbs :tag => :li, :separator => "" %>
-</ol>
+<%= render_breadcrumbs builder: ::Bootstrap4BreadcrumbsBuilder %>
 <h1><%= @title %></h1>

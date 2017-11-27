@@ -96,45 +96,33 @@
   border-color:#696969
 }
 
-.nav-dropdown.active,
-.nav-dropdown.focus,
-.nav-dropdown:active,
-.nav-dropdown:focus,
-.nav-dropdown:hover,
-.open>.dropdown-toggle.nav-dropdown{
-  color:#696969;
-  background-color:#fff;
-  border-color:#fff
+.dropdown-item-project {
+  display: block;
+  width: 100%;
+  padding: 3px 1.5rem;
+  clear: both;
+  font-weight: normal;
+  color: #292b2c;
+  text-align: inherit;
+  white-space: nowrap;
+  background: none;
+  border: 0;
 }
 
-.nav-dropdown.active,
-.nav-dropdown:active,
-.open>.dropdown-toggle.nav-dropdown{
-  background-image:none
+.dropdown-item-project:focus, .dropdown-item-project:hover {
+  color: #1d1e1f;
+  text-decoration: none;
+  background-color: #f7f7f9;
 }
-.nav-dropdown.disabled,
-.nav-dropdown.disabled.active,
-.nav-dropdown.disabled.focus,
-.nav-dropdown.disabled:active,
-.nav-dropdown.disabled:focus,
-.nav-dropdown.disabled:hover,
-.nav-dropdown[disabled],
-.nav-dropdown[disabled].active,
-.nav-dropdown[disabled].focus,
-.nav-dropdown[disabled]:active,
-.nav-dropdown[disabled]:focus,
-.nav-dropdown[disabled]:hover,fieldset[disabled]
-.nav-dropdown,fieldset[disabled]
-.nav-dropdown.active,fieldset[disabled]
-.nav-dropdown.focus,fieldset[disabled]
-.nav-dropdown:active,fieldset[disabled]
-.nav-dropdown:focus,fieldset[disabled]
-.nav-dropdown:hover{
-  background-color:#fff;
-  border-color:#fff
+
+.dropdown-item-project.active, .dropdown-item-project:active {
+  color: #fff;
+  text-decoration: none;
+  background-color: #fff;
 }
-.nav-dropdown
-.badge{
-  color:#fff;
-  background-color:#fff
+
+.dropdown-item-project.disabled, .dropdown-item-project:disabled {
+  color: #636c72;
+  cursor: not-allowed;
+  background-color: transparent;
 }
