@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   get 'sessions/new'
 
   root 		'static_pages#home'
+  get     '/busca',     to: 'dynamic_pages#search'
   get 		'/duvidas',		to: 'static_pages#doubt'
   get		  '/sobre',		  to: 'static_pages#about'
   get 		'/signup', 		to: 'professors#new'

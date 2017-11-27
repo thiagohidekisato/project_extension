@@ -21,7 +21,8 @@ gem 'rails-i18n'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'cloudinary'
-
+gem 'pg_search'
+gem 'pg'
 
 # Use SCSS for stylesheets
 gem 'sass-rails'
@@ -49,7 +50,7 @@ gem 'bcrypt', '~> 3.1.7'
 group :development, :test do
   gem 'binding_of_caller'
   gem 'better_errors'
-  gem 'sqlite3'
+  gem 'pg'
   gem 'byebug', platform: :mri
 end
 
@@ -71,7 +72,6 @@ group :test do
 end
 
 group :production do
-  gem 'pg'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

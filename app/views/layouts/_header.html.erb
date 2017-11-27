@@ -1,4 +1,4 @@
-<header style="background-color: #215A36;">
+<header style="background-color: #215A36;" id ="header">
   <nav class="navbar navbar-expand-lg navbar-dark" style = "font-size:0.8em">
     <div class="container">
       <div class="collapse navbar-collapse">
@@ -10,24 +10,26 @@
             <a class="nav-link", accesskey="2" href="#2"><span> Ir para o menu </span> <span style="color: black; background-color: white; font-size:0.8em;"> 2 </span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link", accesskey="3" href="#3"><span> Ir para a busca </span> <span style="color: black; background-color: white; font-size:0.8em;"> 3 </span></a>
+            <a class="nav-link", accesskey="3" href="#search-form"><span> Ir para a busca </span> <span style="color: black; background-color: white; font-size:0.8em;"> 3 </span></a>
           </li>
           <li class="last-item">
             <a class="nav-link", accesskey="4" href="#footer"><span> Ir para o rodapé </span> <span style="color: black; background-color: white; font-size:0.8em;"> 4 </span></a>
           </li>
         </ul>
       </div>
-      <ul class="navbar-nav ml-auto text-uppercase">
-        <li class="nav-item">
-          <a class="nav-link", href="#"><span> Acessibilidade </span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link", href="#"><span> Alto contraste </span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link", href="#"><span> Mapa do Sítio </span></a>
-        </li>
-      </ul>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ml-auto text-uppercase">
+          <li class="nav-item">
+            <a class="nav-link", href="#"><span> Acessibilidade </span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link", href="#"><span> Alto contraste </span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link", href="#"><span> Mapa do Sítio </span></a>
+          </li>
+        </ul>
+      </div>
     </div>
   </nav>
   <nav class="navbar navbar-expand-lg navbar-dark">
@@ -89,19 +91,16 @@
           </ul>
         </li>
       </ul>
-      <%# ARRUMAR PESQUISA%>
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <div class="widget-search-top" id="busca-teste">
-            <form role="search" method="get" id="searchform" class="navbar-form" action="#">
-              <div class="input-group">
-                <input type="text" class="form-control search-field" name="s" id="search-bar" accesskey="3" placeholder="Entre com sua busca..." title="Ops... função de busca em construção!">
-                <span class="input-group-btn">
-                  <button class="btn btn-default" type="submit"><span class="fa fa-refresh fa-spin fa-fw" aria-hidden="true"></span></button>
-                </span>
-              </div>
-            </form>
-          </div>
+          <%= form_tag busca_path, method: "get", id: "search-form", class: 'input-group' do %>
+            <%= text_field_tag :search, params[:search], placeholder: "Entre com a busca", class: 'form-control' %>
+            <span class="input-group-btn">
+              <%= button_tag type: "submit", class: "btn btn-search" do %>
+                <i class="fa fa-search fa-fw"></i>
+              <% end %>
+            </span>
+          <% end %>
         </li>
       </ul>
     </div>

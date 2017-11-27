@@ -10,7 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171119205117) do
+ActiveRecord::Schema.define(version: 20171126170256) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "pg_search_documents", force: :cascade do |t|
+    t.text "content"
+    t.string "searchable_type"
+    t.bigint "searchable_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["searchable_type", "searchable_id"], name: "index_pg_search_documents_on_searchable_type_and_searchable_id"
+  end
 
   create_table "professors", force: :cascade do |t|
     t.string "name"
@@ -40,7 +52,7 @@ ActiveRecord::Schema.define(version: 20171119205117) do
     t.integer "v_volunteers"
     t.integer "v_bolsistas"
     t.text "perfil_volunteers"
-    t.integer "professor_id"
+    t.bigint "professor_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "picture"
@@ -48,4 +60,5 @@ ActiveRecord::Schema.define(version: 20171119205117) do
     t.index ["professor_id"], name: "index_projects_on_professor_id"
   end
 
+  add_foreign_key "projects", "professors"
 end

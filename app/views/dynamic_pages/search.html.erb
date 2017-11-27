@@ -1,0 +1,8 @@
+<% provide(:title, 'Pesquisa') %>
+<div class="container">
+  <%= will_paginate %>
+  <% @dynamic_pages.each do |pg_search_document| %>
+    <%= render partial: "results_search", locals: {result_search: pg_search_document} %>
+  <% end %>
+  <%= will_paginate %>
+</div>

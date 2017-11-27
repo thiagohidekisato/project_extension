@@ -1,5 +1,9 @@
 class Project < ApplicationRecord
   belongs_to :professor
+
+  include PgSearch
+  multisearchable :against => [:professor, :name, :description]
+
   default_scope -> { order(created_at: :desc) }
   mount_uploader :picture, PictureUploader
   validates :professor_id, presence: true

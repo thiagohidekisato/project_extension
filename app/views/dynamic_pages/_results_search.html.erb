@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <% if result_search.class == Project %>
+        <%= link_to "Projeto" + result_search.name, result_search %>
+        <p>Descrição: <%= result_search.description %></p>
+      <% else %>
+        <% result = result_search.searchable %>
+        <% if result.class == Project %>
+          Projeto: <%=link_to result.name, result %>
+          <p>Descrição: <%= result.description %></p>
+        <% else%>
+          Professor: <%=link_to result.name, result %>
+          <p>Especialização: <%= result.specialization %></p>
+          <p>E-mail: <%= result.email %></p>
+          <p>Telefone: <%= result.phone %></p>
+          <p>Ramal: <%= result.ramal %></p>
+          <p>Sala: <%= result.room %></p>
+          <p>Lattes: <%= result.lattes %></p>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+  <hr>
+</div>
