@@ -2,5 +2,45 @@
 
 <div class="container" >
 	<h1>Atualizar perfil</h1>
-	<p>A adicionar configurações do perfil</p>
+  <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <%= form_for(@professor) do |f| %>
+          <%= render 'shared/error_messages', object: f.object %>
+
+          <%= f.label :name %>
+          <%= f.text_field :name, class: 'form-control' %>
+
+          <%= f.label :email %>
+          <%= f.email_field :email, class: 'form-control' %>
+
+          <%= f.label :phone %>
+          <%= f.phone_field :phone, class: 'form-control' %>
+
+          <%= f.label :ramal %>
+          <%= f.phone_field :ramal, class: 'form-control' %>
+
+          <%= f.label :phone_cel %>
+          <%= f.phone_field :phone_cel, class: 'form-control' %>
+
+          <%= f.label :specialization %>
+          <%= f.text_field :specialization, class: 'form-control' %>
+
+          <%= f.label :room %>
+          <%= f.text_field :room, class: 'form-control' %>
+
+          <%= f.label :lattes %>
+          <%= f.text_field :lattes, class: 'form-control' %>
+
+          <%= f.label :password, "Nova senha" %>
+          <%= f.password_field :password, class: 'form-control' %>
+
+          <%= f.label :password_confirmation, "Confirmar nova senha" %>
+          <%= f.password_field :password_confirmation, class: 'form-control' %>
+
+          <%= f.submit "Save changes", class: "btn btn-primary" %>
+        <% end %>
+
+      </div>
+    </div>
+
 </div>

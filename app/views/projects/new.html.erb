@@ -1,13 +1,11 @@
 <% if logged_in? %>
   <div class="container" >
-    <aside class="col-md-4">
-      <section class="professor_info">
-        <%= render 'shared/professor_info' %>
-      </section>
-      <section class="project_form">
-        <%= render 'shared/project_form' %>
-      </section>
-    </aside>
+    <section class="professor_info">
+      <%= render 'shared/professor_info' %>
+    </section>
+    <section class="project_form">
+      <%= render 'shared/project_form' %>
+    </section>
   </div>
 
 <% else %>

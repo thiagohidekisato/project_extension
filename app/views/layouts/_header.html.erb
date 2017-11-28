@@ -4,7 +4,7 @@
       <div class="collapse navbar-collapse">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a class="nav-link", accesskey="1", href="#conteudo"><span> Ir para o conteúdo </span> <span style="color: black; background-color: white; font-size:0.8em;"> 1 </span></a>
+            <a class="nav-link", accesskey="1", href="#content"><span> Ir para o conteúdo </span> <span style="color: black; background-color: white; font-size:0.8em;"> 1 </span></a>
           </li>
           <li class="nav-item">
             <a class="nav-link", accesskey="2" href="#menu"><span> Ir para o menu </span> <span style="color: black; background-color: white; font-size:0.8em;"> 2 </span></a>
@@ -67,29 +67,28 @@
   <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #184127" id="menu">
     <div class = "container">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <%= link_to "Projetos", projects_path, class: "nav-link" %>
-        </li>
+        <div class="dropdown">
+          <li class="nav-link">Projetos
+            <div class="dropdown-content">
+              <%= link_to "Criar novo projeto", newproj_path, class: "nav-dropdown" %>
+              <%= link_to "Visualizar projetos", projects_path, class: "nav-dropdown" %>
+            </div>
+          </li>
+        </div>
         <li class="nav-item">
           <%= link_to "Professores", professors_path, class: "nav-link" %>
         </li>
         <li class="nav-item">
           <%= link_to "Sobre", sobre_path, class: "nav-link" %>
         </li>
-        <li class = "dropdown">
-          <%= link_to "#", class:"dropdown-toggle", class: "nav-link", "data-toggle" => "dropdown", id: "menu1" do %>
-            <span>Dúvidas</span>
-            <span data-glyph="caret-bottom" title="caret-bottom" aria-hidden="true"></span>
-          <% end %>
-          <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-            <li role="presentation">
-              <%= link_to "Tutoriais", tutorials_path, class: "nav-dropdown" %>
-            </li>
-            <li role="presentation">
-              <%= link_to "Dúvidas Frequentes", duvidas_path, class: "nav-dropdown" %>
-            </li>
-          </ul>
-        </li>
+        <div class="dropdown">
+          <li class="nav-link">Dúvidas
+            <div class="dropdown-content">
+            <%= link_to "Tutoriais", tutorials_path, class: "nav-dropdown" %>
+            <%= link_to "Dúvidas Frequentes", duvidas_path, class: "nav-dropdown" %>
+            </div>
+          </li>
+        </div>
       </ul>
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">

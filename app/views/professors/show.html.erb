@@ -1,8 +1,5 @@
 <% provide(:title, @professor.name) %>
 <div class="container" >
-  <% if logged_in? %>
-    <%= link_to "Cadastre um projeto", newproj_path, class: "btn btn-lg btn-project" %>
-  <% end %>
   <div class="row">
     <aside class="col-md-4">
       <section class="user_info">
