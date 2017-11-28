@@ -4,6 +4,8 @@ class ProjectsController < ApplicationController
   add_breadcrumb "Página inicial", :root_path
 
   def show
+    add_breadcrumb "Projetos", :projects_path
+    add_breadcrumb "Visualização de Projeto"
     @project = Project.find(params[:id])
   end
 
@@ -13,6 +15,7 @@ class ProjectsController < ApplicationController
   end
 
   def new
+      add_breadcrumb "Cadastro de Novo Projeto"
     @project = Project.new
   end
 

@@ -5,6 +5,8 @@ class ProfessorsController < ApplicationController
   add_breadcrumb "Página inicial", :root_path
 
   def show
+    add_breadcrumb "Professores", :professors_path
+    add_breadcrumb "Visualização de Professor"
     @professor = Professor.find(params[:id])
     @projects = @professor.projects.paginate(page: params[:page])
   end
@@ -26,6 +28,7 @@ class ProfessorsController < ApplicationController
   end
 
   def edit
+    add_breadcrumb "Alteração de Dados do Cadastro"
     @professor = Professor.find(params[:id])
   end
 
@@ -40,6 +43,7 @@ class ProfessorsController < ApplicationController
   end
 
   def index
+      add_breadcrumb "Professores"
     @professors = Professor.paginate(page: params[:page])
   end
 
