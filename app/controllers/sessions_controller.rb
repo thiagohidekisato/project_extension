@@ -1,5 +1,9 @@
 class SessionsController < ApplicationController
+
+  add_breadcrumb "Página inicial", :root_path
+  
   def new
+    add_breadcrumb "Login"
   end
 
   def create

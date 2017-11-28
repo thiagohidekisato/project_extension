@@ -13,6 +13,6 @@ class StaticPagesController < ApplicationController
   end
 
   def about
-    add_breadcrumb "Dúvidas Frequentes"
+    add_breadcrumb "Sobre"
   end
 end

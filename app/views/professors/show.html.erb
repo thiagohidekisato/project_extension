@@ -1,4 +1,11 @@
 <% provide(:title, @professor.name) %>
+
+<div class="row">
+    <div class="col-lg-12">
+      <%= render_breadcrumbs builder: ::Bootstrap4BreadcrumbsBuilder %>
+    </div>
+</div>
+
 <div class="container" >
   <div class="row">
     <aside class="col-md-4">
