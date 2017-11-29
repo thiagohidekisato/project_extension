@@ -1,42 +1,43 @@
 <% provide(:title, @project.name) %>
-
-<div class="row">
-    <div class="col-lg-12">
-      <%= render_breadcrumbs builder: ::Bootstrap4BreadcrumbsBuilder %>
-    </div>
-</div>
-<div class="container" >
+<div class="container">
   <div class="row">
-    <div class="col-lg-12">
-      <!-- Name -->
-      <h1 class="mt-4"><%= @project.name %></h1>
-      <!-- Author -->
-      <p class="lead">
-        por
-        <%= link_to @project.professor.name, @project.professor %>
-      </p>
-      <hr>
-      <!-- Date/Time -->
-      <p>Postado <%= time_ago_in_words(@project.created_at) %> atrás.</p>
-      <hr>
-      <!-- Preview Image -->
-      <div class="text-center">
-        <img class="img-fluid rounded" src="http://placehold.it/900x300" alt="">
+      <div class="col-lg-12">
+        <%= render_breadcrumbs builder: ::Bootstrap4BreadcrumbsBuilder %>
       </div>
-      <hr>
-      <!-- Post Content -->
-      <p>Data de início: <%= @project.date_start %></p>
-      <p>Data de fim: <%= @project.date_finish %></p>
-      <p>Descrição: <%= @project.description %></p>
-      <p>Fomento: <%= @project.fomento %></p>
-      <p>Local: <%= @project.local %></p>
-      <p>Imagens: <%= @project.images %></p>
-      <p>Descrição: <%= @project.description %></p>
-      <p>Número de participantes: <%= @project.n_participants %></p>
-      <p>Vagas para voluntários: <%= @project.v_volunteers %></p>
-      <p>Vagas para bolsistas: <%= @project.v_bolsistas %></p>
-      <p>Perfil dos voluntários: <%= @project.perfil_volunteers %></p>
-      <hr>
+  </div>
+  <div class="container" >
+    <div class="row">
+      <div class="col-lg-12">
+        <!-- Name -->
+        <h1 class="mt-4"><%= @project.name %></h1>
+        <!-- Author -->
+        <p class="lead">
+          por
+          <%= link_to @project.professor.name, @project.professor %>
+        </p>
+        <hr>
+        <!-- Date/Time -->
+        <p>Postado <%= time_ago_in_words(@project.created_at) %> atrás.</p>
+        <hr>
+        <!-- Preview Image -->
+        <div class="text-center">
+          <img class="img-fluid rounded" src="http://placehold.it/900x300" alt="">
+        </div>
+        <hr>
+        <!-- Post Content -->
+        <p>Data de início: <%= @project.date_start %></p>
+        <p>Data de fim: <%= @project.date_finish %></p>
+        <p>Descrição: <%= @project.description %></p>
+        <p>Fomento: <%= @project.fomento %></p>
+        <p>Local: <%= @project.local %></p>
+        <p>Imagens: <%= @project.images %></p>
+        <p>Descrição: <%= @project.description %></p>
+        <p>Número de participantes: <%= @project.n_participants %></p>
+        <p>Vagas para voluntários: <%= @project.v_volunteers %></p>
+        <p>Vagas para bolsistas: <%= @project.v_bolsistas %></p>
+        <p>Perfil dos voluntários: <%= @project.perfil_volunteers %></p>
+        <hr>
+      </div>
     </div>
   </div>
 </div>
