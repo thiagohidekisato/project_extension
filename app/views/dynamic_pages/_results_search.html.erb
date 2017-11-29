@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-md-12">
       <% if result_search.class == Project %>
-        <%= link_to "Projeto" + result_search.name, result_search %>
+        <%= link_to "Projeto: " + result_search.name, result_search %>
         <p>Descrição: <%= result_search.description %></p>
       <% else %>
         <% result = result_search.searchable %>
