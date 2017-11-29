@@ -5,29 +5,28 @@
         <%= render_breadcrumbs builder: ::Bootstrap4BreadcrumbsBuilder %>
       </div>
   </div>
-
-  <div class="container" >
-    <div class="row">
-      <aside class="col-md-4">
-        <section class="user_info">
-          <h1>
-            <%= gravatar_for @professor %>
-            <%= @professor.name %>
-          </h1>
-        </section>
-        E-mail: <%= @professor.email %> <br>
-        Telefone: <%= @professor.phone %> Ramal: <%= @professor.ramal %> <br>
-        Especialização: <%= @professor.specialization %>
-      </aside>
-      <div class="col-md-8">
-        <% if @professor.projects.any? %>
-          <h3>Projetos (<%= @professor.projects.count %>)</h3>
-          <ol class="projects">
-            <%= render @projects %>
-          </ol>
-          <%= will_paginate @projects %>
-        <% end %>
-      </div>
+</div>
+<div class="container" >
+  <div class="row">
+    <aside class="col-md-4">
+      <section class="user_info">
+        <h1>
+          <%= gravatar_for @professor %>
+          <%= @professor.name %>
+        </h1>
+      </section>
+      E-mail: <%= @professor.email %> <br>
+      Telefone: <%= @professor.phone %> Ramal: <%= @professor.ramal %> <br>
+      Especialização: <%= @professor.specialization %>
+    </aside>
+    <div class="col-md-8">
+      <% if @professor.projects.any? %>
+        <h3>Projetos (<%= @professor.projects.count %>)</h3>
+        <ol class="projects">
+          <%= render @projects %>
+        </ol>
+        <%= will_paginate @projects %>
+      <% end %>
     </div>
   </div>
 </div>

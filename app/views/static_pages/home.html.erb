@@ -1,32 +1,24 @@
 <header id="myCarousel" class="carousel slide">
   <!-- Indicators -->
   <ol class="carousel-indicators">
-
-    <li data-target="#myCarousel" data-slide-to="0"></li>
-    <li data-target="#myCarousel" data-slide-to="1"></li>
-    <li data-target="#myCarousel" data-slide-to="2"></li>
+    <% for i in 0..2 %>
+      <li data-target="#mycarousel" data-slide-to="#{i}" class="#{'active' if i == 0}"></li>
+    <% end %>
   </ol>
   <!-- Wrapper for slides -->
+  <% i = 0 %>
   <div class="carousel-inner">
-    <div class="carousel-item active">
-      <%= image_tag "projeto1.jpg",class: "fill"%>
-      <div class="carousel-caption">
-          <h2>Projeto NETES</h2>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <%= image_tag "projeto2.jpg",class: "fill"%>
-      <div class="carousel-caption">
-        <h2>Projeto Mão 3D</h2>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <%= image_tag "projeto3.jpg",class: "fill"%>
-      <div class="carousel-caption">
-        <h2>Projeto Parque da Ciência e Tecnologia</h2>
-      </div>
-    </div>
-  </div>
+    <% @projects.each do |project| %>
+      <% if project.picture? %>
+        <div class="carousel-item <%= 'active' if i == 0 %>">
+          <%= image_tag project.picture.url, class: "fill" %>
+          <div class="carousel-caption">
+            <h2><%= project.name %></h2>
+          </div>
+        </div>
+        <% i = i + 1 %>
+      <% end %>
+    <% end %>
   <!-- Controls -->
   <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
     <span class="carousel-control-prev-icon"></span>
@@ -35,3 +27,31 @@
     <span class="carousel-control-next-icon"></span>
   </a>
 </header>
+
+<div class = "container">
+  <!-- Portfolio Section -->
+  <h2>Principais projetos</h2>
+  <div class="row">
+    <% i = 0 %>
+    <% @projects.each do |project| %>
+      <% if i < 6 %>
+        <% if project.picture? %>
+          <% i = i + 1 %>
+          <div class="col-lg-4 col-sm-6 portfolio-item">
+            <div class="card h-100">
+              <%= link_to (image_tag project.picture.url, class:"card-img-top"), project.professor %>
+              <div class="card-body">
+                <h4 class="card-title">
+                  <%= link_to project.name, project %>
+                </h4>
+                <p class="card-text">
+                  <%= project.description %>
+                </p>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+    <% end %>
+  </div>
+</div>

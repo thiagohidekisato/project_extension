@@ -2,6 +2,7 @@ class StaticPagesController < ApplicationController
   add_breadcrumb "Página inicial", :root_path
 
   def home
+    @projects = Project.all
   end
 
   def doubt
@@ -15,4 +16,5 @@ class StaticPagesController < ApplicationController
   def about
     add_breadcrumb "Sobre"
   end
+
 end
