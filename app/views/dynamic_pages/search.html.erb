@@ -5,4 +5,9 @@
     <%= render partial: "results_search", locals: {result_search: pg_search_document} %>
   <% end %>
   <%= will_paginate %>
+
+  <% if @dynamic_pages.blank? %>
+    <h1>Não foram encontrados resultados para a pesquisa realizada</h1>
+  <% end %>
+
 </div>
