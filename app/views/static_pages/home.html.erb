@@ -1,9 +1,7 @@
 <header id="myCarousel" class="carousel slide">
   <!-- Indicators -->
   <ol class="carousel-indicators">
-    <% @outings.each_with_index do |outing, i| %>
-      <li data-target="#mycarousel" data-slide-to=#{i) class="#{'active' if i == 0}"></li>
-    <% end %>
+
     <li data-target="#myCarousel" data-slide-to="0"></li>
     <li data-target="#myCarousel" data-slide-to="1"></li>
     <li data-target="#myCarousel" data-slide-to="2"></li>

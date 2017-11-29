@@ -1,6 +1,5 @@
 <% @title = "Dúvidas Frequentes" %>
 <% provide(:title, @title) %>
-<<<<<<< HEAD
 <div class="container">
   <%= render_breadcrumbs builder: ::Bootstrap4BreadcrumbsBuilder %>
   <h1><%= @title %></h1>
@@ -13,7 +12,7 @@
       </div>
       <div id="collapseOne" class="panel-collapse collapse">
         <div id = "panel-body">
-          <h4>Qualquer professor do ICT que possua uma ideia de projeto de extensão.</h4>
+          <p align="justify">O cadastro de novos projetos pode ser realizado apenas por professores do Instituto de Ciência e Tecnologia da UNIFESP</p>
         </div>
       </div>
     </div>
@@ -24,14 +23,14 @@
         </h4>
       </div>
       <div id="collapseTwo" class="panel-collapse collapse">
-        <h4>
+        <p align="justify">
           <ol>
             <li>Seja um professor do ICT;</li>
             <li>Cadastre-se no site;</li>
             <li>Acesse a página de projetos;</li>
             <li>Clique em cadastrar projeto.</li>
           </ol>
-        </h4>
+        </p>
       </div>
     </div>
     <div class="panel panel-default">
@@ -41,54 +40,11 @@
         </h4>
       </div>
       <div id="collapseThree" class="panel-collapse collapse">
-        <h4>Na <%= link_to "página de projetos", projects_path%> é possível visualizar todos os projetos existentes.</h4>
-      </div>
-=======
-<%= render_breadcrumbs builder: ::Bootstrap4BreadcrumbsBuilder %>
-<h1><%= @title %></h1>
-<div class = "panel-group" id="accordion">
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h4 class = "panel-title">
-        <%= link_to "Quem pode cadastrar um projeto?", "#collapseOne", { :class => "accordion-toggle", "data-toggle" => "collapse", "data-parent" => "#accordion"} %>
-      </h4>
-    </div>
-    <div id="collapseOne" class="panel-collapse collapse">
-      <div id = "panel-body">
-        <p align="justify">O cadastro de novos projetos pode ser realizado apenas por professores do Instituto de Ciência e Tecnologia da UNIFESP</p>
+        <p align="justify">Na <%= link_to "página de projetos", projects_path%> é possível visualizar todos os projetos existentes.</p>
       </div>
     </div>
   </div>
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        <%= link_to "Como cadastrar um projeto?", "#collapseTwo", { :class => "accordion-toggle", "data-toggle" => "collapse", "data-parent" => "#accordion"} %>
-      </h4>
-    </div>
-    <div id="collapseTwo" class="panel-collapse collapse">
-      <p align="justify">
-        <ol>
-          <li>Seja um professor do ICT;</li>
-          <li>Cadastre-se no site;</li>
-          <li>Acesse a página de projetos;</li>
-          <li>Clique em cadastrar projeto.</li>
-        </ol>
-      </p>
-    </div>
-  </div>
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        <%= link_to "Como posso ver os projetos disponíveis?", "#collapseThree", { :class => "accordion-toggle", "data-toggle" => "collapse", "data-parent" => "#accordion"} %>
-      </h4>
-    </div>
-    <div id="collapseThree" class="panel-collapse collapse">
-      <p align="justify">Na <%= link_to "página de projetos", projects_path%> é possível visualizar todos os projetos existentes.</p>
->>>>>>> 2c457634453c49b2b956d36fe505d34afc302b15
-    </div>
-  </div>
+  </br>
+  </br>
+  </br>
 </div>
-
-</br>
-</br>
-</br>
