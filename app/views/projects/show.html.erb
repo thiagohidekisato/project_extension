@@ -21,8 +21,13 @@
         <hr>
         <!-- Preview Image -->
         <div class="text-center">
-          <img class="img-fluid rounded" src="http://placehold.it/900x300" alt="">
+          <% if @project.picture? %>
+            <%= link_to (image_tag @project.picture.url), @project.professor, class:"img-fluid rounded" %>
+          <% else %>
+            <img class="img-fluid rounded" src="http://placehold.it/900x300" alt="">
+          <% end %>
         </div>
+        
         <hr>
         <!-- Post Content -->
         <p>Data de início: <%= @project.date_start %></p>

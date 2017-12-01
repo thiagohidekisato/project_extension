@@ -1,0 +1,54 @@
+<% provide(:title, "Editar") %>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <%= render_breadcrumbs builder: ::Bootstrap4BreadcrumbsBuilder %>
+    </div>
+  </div>
+  <h1>Alteração de dados do projeto</h1>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <%= form_for(@project) do |f| %>
+        <%= render 'shared/error_messages', object: f.object %>
+
+        <%= f.label :name, "Nome" %>
+        <%= f.text_field :name, class: 'form-control' %>
+        <br>
+        <%= f.label :data_start %>
+        <%= f.text_area :date_start, class: 'form-control' %>
+        <br>
+        <%= f.label :data_finish %>
+        <%= f.text_area :date_finish, class: 'form-control' %>
+        <br>
+        <%= f.label :fomento %>
+        <%= f.check_box :fomento, class: 'checkbox' %><label for="fomento">Sim</label>
+        <br>
+        <%= f.label :local %>
+        <%= f.text_area :local, class: 'form-control' %>
+        <br>
+        <%= f.label :description %>
+        <%= f.text_area :description, class: 'form-control' %>
+        <br>
+        <%= f.label :n_participants %>
+        <%= f.number_field :n_participants, class: 'form-control' %>
+        <br>
+        <%= f.label :v_volunteers %>
+        <%= f.number_field :v_volunteers, class: 'form-control' %>
+        <br>
+        <%= f.label :v_bolsistas %>
+        <%= f.number_field :v_bolsistas, class: 'form-control' %>
+        <br>
+        <%= f.label :perfil_volunteers %>
+        <%= f.text_area :perfil_volunteers, class: 'form-control' %>
+        <br>
+        <%= f.label :picture %>
+        <span class="picture">
+          <%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png' %>
+        </span>
+        <br>
+        <%= f.submit "Editar projeto", class: "btn btn-project" %><br>
+      <% end %>
+    </div>
+    <br>
+  </div>
+</div>

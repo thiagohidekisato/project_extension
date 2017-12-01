@@ -1,15 +1,11 @@
 <div class="container">
   <div class="row">
     <div class="col-md-7">
-      <% if false %>
         <% if project.picture? %>
-          <%= link_to (image_tag project.picture.url), project.professor %>
+          <%= link_to (image_tag project.picture.url, width: 600), project.professor %>
         <% else %>
-          <%= link_to gravatar_for(project.professor, size: 50), project.professor %>
+          <img class="img-fluid rounded mb-3 mb-md-0" src="http://placehold.it/700x300" alt="">
         <% end %>
-      <% else %>
-        <img class="img-fluid rounded mb-3 mb-md-0" src="http://placehold.it/700x300" alt="">
-      <% end %>
 
     </div>
     <div class="col-md-5">
@@ -25,6 +21,7 @@
     <% if current_professor?(project.professor) %>
       <%= link_to "Excluir", project, method: :delete,
                                         data: { confirm: "Você tem certeza?" } %>
+      <%= link_to "Editar",  edit_project_path(project) %>
     <% end %>
   </span>
   <hr>

@@ -5,49 +5,46 @@
       <%= render_breadcrumbs builder: ::Bootstrap4BreadcrumbsBuilder %>
     </div>
   </div>
+  <h1>Alteração de dados do perfil</h1>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <%= form_for(@professor) do |f| %>
+        <%= render 'shared/error_messages', object: f.object %>
 
-  <div class="container" >
-    <h1>Alteração de dados do perfil</h1>
-    <div class="row">
-      <div class="col-md-6 col-md-offset-3">
-        <%= form_for(@professor) do |f| %>
-          <%= render 'shared/error_messages', object: f.object %>
-          <br>
-          <%= f.label :name, "Nome" %>
-          <%= f.text_field :name, class: 'form-control' %>
-          <br>
-          <%= f.label :email, "E-mail" %>
-          <%= f.email_field :email, class: 'form-control' %>
-          <br>
-          <%= f.label :phone, "Telefone fixo" %>
-          <%= f.phone_field :phone, class: 'form-control' %>
-          <br>
-          <%= f.label :ramal, "Ramal" %>
-          <%= f.phone_field :ramal, class: 'form-control' %>
-          <br>
-          <%= f.label :phone_cel, "Celular" %>
-          <%= f.phone_field :phone_cel, class: 'form-control' %>
-          <br>
-          <%= f.label :specialization, "Especialização" %>
-          <%= f.text_field :specialization, class: 'form-control' %>
-          <br>
-          <%= f.label :room, "Sala" %>
-          <%= f.text_field :room, class: 'form-control' %>
-          <br>
-          <%= f.label :lattes, "Link para o Lattes" %>
-          <%= f.text_field :lattes, class: 'form-control' %>
-          <br>
-          <%= f.label :password, "Nova senha" %>
-          <%= f.password_field :password, class: 'form-control' %>
-          <br>
-          <%= f.label :password_confirmation, "Confirmar nova senha" %>
-          <%= f.password_field :password_confirmation, class: 'form-control' %>
-          <br>
-          <%= f.submit "Salvar alterações", class: "btn btn-project" %>
-          <br>
-          <br>
-        <% end %>
-      </div>
+        <%= f.label :name, "Nome" %>
+        <%= f.text_field :name, class: 'form-control' %>
+
+        <%= f.label :email, "E-mail" %>
+        <%= f.email_field :email, class: 'form-control' %>
+
+        <%= f.label :phone, "Telefone fixo" %>
+        <%= f.phone_field :phone, class: 'form-control' %>
+
+        <%= f.label :ramal, "Ramal" %>
+        <%= f.phone_field :ramal, class: 'form-control' %>
+
+        <%= f.label :phone_cel, "Celular" %>
+        <%= f.phone_field :phone_cel, class: 'form-control' %>
+
+        <%= f.label :specialization, "Especialização" %>
+        <%= f.text_field :specialization, class: 'form-control' %>
+
+        <%= f.label :room, "Sala" %>
+        <%= f.text_field :room, class: 'form-control' %>
+
+        <%= f.label :lattes, "Link para o Lattes" %>
+        <%= f.text_field :lattes, class: 'form-control' %>
+
+        <%= f.label :password, "Nova senha" %>
+        <%= f.password_field :password, class: 'form-control' %>
+
+        <%= f.label :password_confirmation, "Confirmar nova senha" %>
+        <%= f.password_field :password_confirmation, class: 'form-control' %>
+        <br>
+        <%= f.submit "Salvar alterações", class: "btn btn-project" %>
+        <br>
+        <br>
+      <% end %>
     </div>
   </div>
 </div>

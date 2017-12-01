@@ -14,5 +14,5 @@ Rails.application.routes.draw do
   post  	'/login',   	to: 'sessions#create'
   delete	'/logout',  	to: 'sessions#destroy'
   resources :professors
-  resources :projects,  only: [:create, :destroy, :show, :index]
+  resources :projects
 end

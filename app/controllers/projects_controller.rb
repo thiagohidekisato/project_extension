@@ -1,6 +1,6 @@
 class ProjectsController < ApplicationController
   before_action :logged_in_professor, only: [:create, :destroy]
-  before_action :correct_professor,   only: :destroy
+  before_action :correct_professor,   only: [:destroy, :edit, :update]
   add_breadcrumb "Página inicial", :root_path
 
   def show
@@ -15,8 +15,23 @@ class ProjectsController < ApplicationController
   end
 
   def new
-      add_breadcrumb "Cadastro de Novo Projeto"
+    add_breadcrumb "Cadastro de Novo Projeto"
     @project = Project.new
+  end
+
+  def edit
+    add_breadcrumb "Alteração de Dados do Projeto"
+    @project = Project.find(params[:id])
+  end
+
+  def update
+    @project = Project.find(params[:id])
+    if @project.update_attributes(project_params)
+      flash[:success] = "Projeto atualizado"
+      redirect_to @project
+    else
+      render 'edit'
+    end
   end
 
   def create
