@@ -1,13 +1,14 @@
-<div class="container">
-  <% @title = "Tutoriais" %>
-  <% provide(:title, @title) %>
-  <%= render_breadcrumbs builder: ::Bootstrap4BreadcrumbsBuilder %>
-  <h1><%= @title %></h1>
-  </br>
-  </br>
-  </br>
-  </br>
-  </br>
-  </br>
-  </br>
-</div>
+<% @title = "Tutoriais" %>
+<% provide(:title, @title) %>
+<ol class="breadcrumb">
+  <%= render_breadcrumbs :tag => :li, :separator => "" %>
+</ol>
+<h1><%= @title %></h1>
+
+<img height="500px" width="700px" src="/assets/tutoriais.png" alt="Tutoriais" />
+
+<h5>Link 1: <%= link_to "aqui", "https://goo.gl/lKNxRF"%>.</h5>
+
+<h5>Link 2: <%= link_to "aqui", " http://www.unifesp.br/reitoria/proex/siex-frame"%>.</h5>
+
+<h5>Link 3: <%= link_to "aqui", "https://www.unifesp.br/campus/sjc/calendario-reunioes-caex.html"%>.</h5>
