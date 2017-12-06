@@ -33,15 +33,11 @@ header.carousel .carousel-inner {
 }
 
 header.carousel .fill {
-    min-width: 100%;
-    max-height: 300px;
-    object-fit: cover;
-    overflow: hidden;
-    background-position: center;
-    background-size: cover;
-    image-position: 0% 100%;
-    image-size: cover;
-    image-repeat: no-repeat;
+    height: 300px;
+    width: auto;
+    /*object-fit: cover;
+    overflow: hidden;*/
+    background-repeat: no-repeat;
 }
 
 /* 404 Page Styles */
@@ -95,10 +91,15 @@ footer {
     header.carousel .carousel {
         height: 70%;
     }
+
+    header.carousel .fill {
+      height: 210px;
+      width: auto;
+      /*object-fit: cover;
+      overflow: hidden;*/
+      background-repeat: no-repeat;
+    }
 }
-
-
-
 
 
 

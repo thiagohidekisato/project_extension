@@ -203,3 +203,28 @@
 .dropdown:hover .dropbtn {
    background-color: #3e8e41;
 }
+
+
+.carousel-caption-opcacity {
+  position: absolute;
+  right: 15%;
+  bottom: 20px;
+  left: 15%;
+  z-index: 10;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #fff;
+  text-align: center;
+  opacity: 0.9;
+}
+
+
+.image-container {
+  width: 300px;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle
+}

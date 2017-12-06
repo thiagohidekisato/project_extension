@@ -7,8 +7,6 @@ Rails.application.routes.draw do
   get		  '/sobre',		  to: 'static_pages#about'
   get 		'/signup', 		to: 'professors#new'
   post 		'/signup',  	to: 'professors#create'
-  get     '/newproj',   to: 'projects#new'
-  post    '/newproj',   to: 'projects#create'
   get   	'/login',   	to: 'sessions#new'
   get     '/tutorials', to: 'static_pages#tutorials'
   post  	'/login',   	to: 'sessions#create'

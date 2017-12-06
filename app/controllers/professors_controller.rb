@@ -43,7 +43,7 @@ class ProfessorsController < ApplicationController
   end
 
   def index
-      add_breadcrumb "Professores"
+    add_breadcrumb "Professores"
     @professors = Professor.paginate(page: params[:page])
   end
 

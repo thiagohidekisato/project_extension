@@ -70,16 +70,13 @@
         <div class="dropdown">
           <li class="nav-link">Projetos
             <div class="dropdown-content">
-              <%= link_to "Cadastrar novo projeto", newproj_path, class: "nav-dropdown" %>
+              <%= link_to "Cadastrar novo projeto", new_project_path, class: "nav-dropdown" %>
               <%= link_to "Visualizar projetos", projects_path, class: "nav-dropdown" %>
             </div>
           </li>
         </div>
         <li class="nav-item">
           <%= link_to "Professores", professors_path, class: "nav-link" %>
-        </li>
-        <li class="nav-item">
-          <%= link_to "Sobre", sobre_path, class: "nav-link" %>
         </li>
         <div class="dropdown">
           <li class="nav-link">Dúvidas
@@ -89,6 +86,9 @@
             </div>
           </li>
         </div>
+        <li class="nav-item">
+          <%= link_to "Sobre", sobre_path, class: "nav-link" %>
+        </li>
       </ul>
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">

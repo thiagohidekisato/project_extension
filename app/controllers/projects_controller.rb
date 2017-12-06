@@ -41,7 +41,7 @@ class ProjectsController < ApplicationController
       redirect_to projects_path
     else
       flash[:danger] = "Ops... os campos não foram preenchidos corretamente. Projeto não adicionado"
-      redirect_to projects_path
+      render 'new'
     end
   end
 

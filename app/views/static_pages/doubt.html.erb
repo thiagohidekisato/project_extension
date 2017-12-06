@@ -3,48 +3,102 @@
 <div class="container">
   <%= render_breadcrumbs builder: ::Bootstrap4BreadcrumbsBuilder %>
   <h1><%= @title %></h1>
-  <div class = "panel-group" id="accordion">
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h4 class = "panel-title">
-          <%= link_to "Quem pode cadastrar um projeto?", "#collapseOne", { :class => "accordion-toggle", "data-toggle" => "collapse", "data-parent" => "#accordion"} %>
-        </h4>
+  <div id="accordion" role="tablist" aria-multiselectable="true">
+    <div class="card">
+      <div class="card-header" role="tab" id="headingOne">
+        <h5 class="mb-0">
+          <%= link_to "O que é extensão?", "#collapseOne", { :class => "accordion-toggle", "data-toggle" => "collapse", "data-parent" => "#accordion"} %>
+          </a>
+        </h5>
       </div>
-      <div id="collapseOne" class="panel-collapse collapse">
-        <div id = "panel-body">
+
+      <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
+        <div class="card-block">
+          <p align="justify">Segunda a Política Nacional de Extensão, a Extensão Universitária é o processo educativo, cultural e científico que articula o Ensino e a Pesquisa de forma indissociável e viabiliza a relação transformadora entre a Universidade e a Sociedade. O Plano Nacional de Extensão define Diretrizes para a Extensão Universitária que devem estar presentes em todas as ações de Extensão e que podem ser, didaticamente, expressadas em quatro eixos: Impacto e transformação, Interação dialógica, Interdisciplinaridade e Indissociabilidade ensino – pesquisa – extensão.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header" role="tab" id="headingTwo">
+        <h5 class="mb-0">
+          <%= link_to "Qual a importância da extensão?", "#collapseTwo", { :class => "accordion-toggle", "data-toggle" => "collapse", "data-parent" => "#accordion"} %>
+        </h5>
+      </div>
+      <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
+        <div class="card-block">
+          <p align="justify">Por meio da extensão, a universidade tem o ensejo de transmitir o conhecimento para a comunidade em geral, conhecimento este que é produzido com pesquisa e projetos educacionais. Estes projetos concretizam a interação entre instituição e sociedade com a troca de experiências e a promoção do desenvolvimento de novos processos de ensinoaprendizagem praticados no dia-a-dia dos envolvidos. </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header" role="tab" id="headingThree">
+        <h5 class="mb-0">
+          <%= link_to "Orientações gerais para o credenciamento de ações extensionistas de cursos ou eventos", "#collapseThree", { :class => "accordion-toggle", "data-toggle" => "collapse", "data-parent" => "#accordion"} %>
+        </h5>
+      </div>
+      <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree">
+        <div class="card-block">
+          <p align="justify">
+            <ul>
+              <li>Se o curso ou evento contemplar taxa de inscrição e/ou mensalidade é obrigatório o preenchimento da Planilha de custo. A planilha será avaliada pela FAP que por sua vez pode emitir parecer favorável ou não;</li>
+              <li>Para utilizar o logo e nome da UNIFESP a ação deve ser credenciada. A ação pode ser curso ou evento;</li>
+              <li>Para ser curso a carga horária tem que ser no mínimo 8 e no máximo 179 horas;</li>
+              <li>O formulário de credenciamento "Solicitação de Aproação de Ação de Extensão" deve ser assinado: pelo(a) Chefe de Departamento ou Diretor(a) Acadêmico de Campus e pelo Coordenador(a) da Ação;</li>
+              <li>Nos campos destinados a assinatura deve constar o carimbo de quem assina.</li>
+            </ul>
+          <p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header" role="tab" id="headingFour">
+        <h5 class="mb-0">
+          <%= link_to "Quem pode cadastrar um projeto?", "#collapseFour", { :class => "accordion-toggle", "data-toggle" => "collapse", "data-parent" => "#accordion"} %>
+        </h5>
+      </div>
+      <div id="collapseFour" class="collapse" role="tabpanel" aria-labelledby="headingFour">
+        <div class="card-block">
           <p align="justify">O cadastro de novos projetos pode ser realizado apenas por professores do Instituto de Ciência e Tecnologia da UNIFESP</p>
         </div>
       </div>
     </div>
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h4 class="panel-title">
-          <%= link_to "Como cadastrar um projeto?", "#collapseTwo", { :class => "accordion-toggle", "data-toggle" => "collapse", "data-parent" => "#accordion"} %>
-        </h4>
+
+    <div class="card">
+      <div class="card-header" role="tab" id="headingFive">
+        <h5 class="mb-0">
+          <%= link_to "Como cadastrar um projeto?", "#collapseFive", { :class => "accordion-toggle", "data-toggle" => "collapse", "data-parent" => "#accordion"} %>
+        </h5>
       </div>
-      <div id="collapseTwo" class="panel-collapse collapse">
-        <p align="justify">
-          <ol>
-            <li>Seja um professor do ICT;</li>
-            <li>Cadastre-se no site;</li>
-            <li>Acesse a página de projetos;</li>
-            <li>Clique em cadastrar projeto.</li>
-          </ol>
-        </p>
-      </div>
-    </div>
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h4 class="panel-title">
-          <%= link_to "Como posso ver os projetos disponíveis?", "#collapseThree", { :class => "accordion-toggle", "data-toggle" => "collapse", "data-parent" => "#accordion"} %>
-        </h4>
-      </div>
-      <div id="collapseThree" class="panel-collapse collapse">
-        <p align="justify">Na <%= link_to "página de projetos", projects_path%> é possível visualizar todos os projetos existentes.</p>
+      <div id="collapseFive" class="collapse" role="tabpanel" aria-labelledby="headingFive">
+        <div class="card-block">
+          <p align="justify">
+            <ol>
+              <li>Seja um professor do ICT;</li>
+              <li>Cadastre-se no site;</li>
+              <li>Acesse a página de projetos;</li>
+              <li>Clique em cadastrar projeto.</li>
+            </ol>
+          </p>
+        </div>
       </div>
     </div>
+
+    <div class="card">
+      <div class="card-header" role="tab" id="headingSix">
+        <h5 class="mb-0">
+          <%= link_to "Como posso ver os projetos disponíveis?", "#collapseSix", { :class => "accordion-toggle", "data-toggle" => "collapse", "data-parent" => "#accordion"} %>
+        </h5>
+      </div>
+      <div id="collapseSix" class="collapse" role="tabpanel" aria-labelledby="headingSix">
+        <div class="card-block">
+          <p align="justify">Na <%= link_to "página de projetos", projects_path%> é possível visualizar todos os projetos existentes.</p>
+        </div>
+      </div>
+    </div>
+
   </div>
-  </br>
-  </br>
   </br>
 </div>

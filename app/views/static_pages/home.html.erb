@@ -1,36 +1,42 @@
-<header id="myCarousel" class="carousel slide">
-  <!-- Indicators -->
-  <ol class="carousel-indicators">
-    <% for i in 0..2 %>
-      <li data-target="#mycarousel" data-slide-to="#{i}" class="#{'active' if i == 0}"></li>
-    <% end %>
-  </ol>
-  <!-- Wrapper for slides -->
-  <% i = 0 %>
-  <div class="carousel-inner">
-    <% @projects.each do |project| %>
-      <% if project.picture? %>
-        <div class="carousel-item <%= 'active' if i == 0 %>">
-          <%= image_tag project.picture.url, class: "fill" %>
-          <div class="carousel-caption">
-            <h2><%= project.name %></h2>
-          </div>
-        </div>
-        <% i = i + 1 %>
+<div class = "container">
+  <header id="myCarousel" class="carousel slide">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <% for i in 0..2 %>
+        <li data-target="#mycarousel" data-slide-to="#{i}" class="#{'active' if i == 0}"></li>
       <% end %>
-    <% end %>
-  <!-- Controls -->
-  <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
-    <span class="carousel-control-prev-icon"></span>
-  </a>
-  <a class="carousel-control-next" href="#myCarousel" data-slide="next">
-    <span class="carousel-control-next-icon"></span>
-  </a>
-</header>
+    </ol>
+    <!-- Wrapper for slides -->
+    <% i = 0 %>
+    <div class="carousel-inner">
+      <% @projects.each do |project| %>
+        <% if project.picture? %>
+          <div class="carousel-item <%= 'active' if i == 0 %>">
+            <%= image_tag project.picture.url, class: "fill d-block mx-auto" %>
+            <!--
+            <div class="carousel-caption-opcacity">
+              <h2 style="background-color: #808080;" ><%= project.name %></h2>
+            </div>
+            -->
+          </div>
+          <% i = i + 1 %>
+        <% end %>
+      <% end %>
+    <!-- Controls -->
+    <a class="carousel-control-prev" href="#myCarousel" data-slide="prev", style="background-color: #808080;">
+      <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#myCarousel" data-slide="next"  style="background-color: #808080;">
+      <span class="carousel-control-next-icon"></span>
+    </a>
+  </header>
+</div>
 
 <div class = "container">
   <!-- Portfolio Section -->
-  <h2>Principais projetos</h2>
+  <br>
+  <h1 style="text-align: center;" >Bem-vindo ao Portal Extensão da UNIFESP</h1>
+  <br>
   <div class="row">
     <% i = 0 %>
     <% @projects.each do |project| %>
@@ -39,13 +45,15 @@
           <% i = i + 1 %>
           <div class="col-lg-4 col-sm-6 portfolio-item">
             <div class="card h-100">
-              <%= link_to (image_tag project.picture.url, class:"card-img-top"), project.professor %>
+              <div class = "image-container d-flex align-items-center h100" >
+                <%= link_to (image_tag project.picture.url, class:"card-img-top"), project %>
+              </div>
               <div class="card-body">
                 <h4 class="card-title">
                   <%= link_to project.name, project %>
                 </h4>
                 <p class="card-text">
-                  <%= project.description %>
+                  <%= truncate(project.description, length: 250)  { link_to "Ler mais", project } %>
                 </p>
               </div>
             </div>
