@@ -1,4 +1,5 @@
-pt-BR:
+"pt-BR":
+
   # formatos de data e hora
   date:
     formats:
@@ -117,7 +118,7 @@ pt-BR:
       decimal_units:
         format: "%n %u"
         units:
-          unit: ""     
+          unit: ""
           thousand: "mil"
           million:
             one: milhão
@@ -141,7 +142,16 @@ pt-BR:
 
   # ActiveRecord
   activerecord:
+    models:
+      professor: Professor
+      project: Projeto
+    attributes:
+      professor:
+        name: "Nome"
+      project:
+        name: "Nome"
     errors:
+      format: "%{attribute} %{message}"
       template:
         header:
           one: "Não foi possível gravar %{model}: 1 erro"
