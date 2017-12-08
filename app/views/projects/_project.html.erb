@@ -10,8 +10,8 @@
     </div>
     <div class="col-md-5">
       <h3><%= project.name %></h3>
-      <p>Descrição: <%= project.description %></p>
-      <p>Perfil dos voluntários: <%= project.perfil_volunteers %></p>
+      <p><b>Descrição:</b> <%= truncate(project.description, length: 250)  { link_to " Ler mais", project } %></p>
+      <p><b>Local:</b> <%= project.local %></p>
       <%= link_to "Ver projeto", project, class: "btn btn-project"%>
     </div>
   </div>

@@ -2,32 +2,44 @@
   <%= form_for(@project) do |f| %>
     <%= render 'shared/error_messages', object: f.object %>
     <div class="field">
-      *Nome:
-        <%= f.text_area :name, placeholder: "Nome do projeto", class: 'form-control' %><br>
-      *Data de início: (formato 01/01/2001)
-        <%= f.text_area :date_start, placeholder: "Data de início do projeto", class: 'form-control' %><br>
-      Data de fim: (formato 01/01/2001)
-        <%= f.text_area :date_finish, placeholder: "Data de início do projeto", class: 'form-control' %><br>
-      *Aceita fomento empresarial?:
-        <%= f.check_box :fomento, class: 'checkbox' %> <label for="fomento">Sim</label> <br>
-      *Local:
-        <%= f.text_area :local, placeholder: "Local de realização do projeto", class: 'form-control' %><br>
-      <%#Imagem:
-        <%= f.text_area :images, placeholder: "Imagem", class: 'form-control' <br>%>
-      *Descrição:
-        <%= f.text_area :description, placeholder: "Adicionar descrição", class: 'form-control' %><br>
-      *Número de participantes:
-        <%= f.number_field :n_participants, class: 'form-control' %><br>
-      *Vagas para voluntários:
-        <%= f.number_field :v_volunteers, class: 'form-control' %><br>
-      *Vagas para bolsistas
-        <%= f.number_field :v_bolsistas, class: 'form-control' %><br>
-      *Perfil dos voluntários:
-        <%= f.text_area :perfil_volunteers, placeholder: "Perfil dos voluntários", class: 'form-control' %><br>
-      Imagem:
+      <br>
+      <%= f.label :name, "Nome" %>
+      <%= f.text_field :name, class: 'form-control' %>
+      <br>
+      <%= f.label :data_start, "Data de Início" %>
+      <%= f.text_area :date_start, class: 'form-control' %>
+      <br>
+      <%= f.label :data_finish , "Data de Término"%>
+      <%= f.text_area :date_finish, class: 'form-control' %>
+      <br>
+      <%= f.label :fomento , "Aceita Fomento? "%>
+      <%= f.check_box :fomento, class: 'checkbox' %><label for="fomento">Sim</label>
+      <br>
+      <br>
+      <%= f.label :local , "Local"%>
+      <%= f.text_area :local, class: 'form-control' %>
+      <br>
+      <%= f.label :description, "Descrição" %>
+      <%= f.text_area :description, class: 'form-control' %>
+      <br>
+      <%= f.label :n_participants , "Número de Participantes"%>
+      <%= f.number_field :n_participants, class: 'form-control' %>
+      <br>
+      <%= f.label :v_volunteers , "Número de Voluntários"%>
+      <%= f.number_field :v_volunteers, class: 'form-control' %>
+      <br>
+      <%= f.label :v_bolsistas, "Número de Bolsistas" %>
+      <%= f.number_field :v_bolsistas, class: 'form-control' %>
+      <br>
+      <%= f.label :perfil_volunteers , "Perfil dos Voluntários"%>
+      <%= f.text_area :perfil_volunteers, class: 'form-control' %>
+      <br>
+      <%= f.label :picture , "Imagem"%>
       <span class="picture">
         <%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png' %>
-      </span><br>
+      </span>
+
+
     </div>
     <br>
     <%= f.submit "Cadastrar projeto", class: "btn btn-project" %><br>

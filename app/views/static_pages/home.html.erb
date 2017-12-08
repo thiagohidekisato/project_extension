@@ -1,4 +1,4 @@
-<div class = "container">
+f<div class = "container">
   <header id="myCarousel" class="carousel slide">
     <!-- Indicators -->
     <ol class="carousel-indicators">
@@ -53,7 +53,7 @@
                   <%= link_to project.name, project %>
                 </h4>
                 <p class="card-text">
-                  <%= truncate(project.description, length: 250)  { link_to "Ler mais", project } %>
+                  <%= truncate(project.description, length: 250)  { link_to " Ler mais", project } %>
                 </p>
               </div>
             </div>
@@ -63,3 +63,4 @@
     <% end %>
   </div>
 </div>
+<br>

@@ -67,9 +67,9 @@
   <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #184127" id="menu">
     <div class = "container">
       <ul class="navbar-nav mr-auto">
-        <div class="dropdown">
-          <li class="nav-link">Projetos
-            <div class="dropdown-content">
+        <div class="dropdown" style="cursor:pointer">
+          <li class="nav-link" >Projetos
+            <div class="dropdown-content" >
               <%= link_to "Cadastrar novo projeto", new_project_path, class: "nav-dropdown" %>
               <%= link_to "Visualizar projetos", projects_path, class: "nav-dropdown" %>
             </div>
@@ -78,7 +78,7 @@
         <li class="nav-item">
           <%= link_to "Professores", professors_path, class: "nav-link" %>
         </li>
-        <div class="dropdown">
+        <div class="dropdown" style="cursor:pointer">
           <li class="nav-link">Dúvidas
             <div class="dropdown-content">
             <%= link_to "Tutoriais", tutorials_path, class: "nav-dropdown" %>
